@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "Tool to capture web content, screenshots, and videos",
   "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0 <21.0.0"
+  },
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run server",
+    "dev": "npm run dev",
+    "server": "node server.js",
     "dev": "nodemon server.js"
   },
   "dependencies": {
@@ -17,5 +22,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
-  }
+  },
+  "bun": false
 }
