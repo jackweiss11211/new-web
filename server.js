@@ -40,7 +40,7 @@ app.post('/api/search', async (req, res) => {
         
         // Create browser instance
         const browser = await puppeteer.launch({
-            headless: false,
+            headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
         
@@ -120,7 +120,7 @@ app.post('/api/capture-url', async (req, res) => {
         const { url } = req.body;
         
         const browser = await puppeteer.launch({
-            headless: false,
+            headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
         
